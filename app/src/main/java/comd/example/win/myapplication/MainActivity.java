@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ll = findViewById(R.id.ll);
-        mll = findViewById(R.id.mll);
-        iv = findViewById(R.id.iv);
-        MyLinearLayout mll2 = findViewById(R.id.mll2);
+        ll = (MyLinearLayout) findViewById(R.id.ll);
+        mll = (MyLinearLayout) findViewById(R.id.mll);
+        iv = (MyImageView) findViewById(R.id.iv);
+        MyLinearLayout mll2 = (MyLinearLayout) findViewById(R.id.mll2);
         mll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

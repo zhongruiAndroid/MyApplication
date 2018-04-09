@@ -12,7 +12,7 @@ import android.view.View;
  * Created by windows10 on 2018/3/28.
  */
 
-public class BaseViewHelper {
+public class BaseViewHelper extends Helper{
     /**[1]无press效果,全边框,gradientDrawableNormal*/
     /**[2]无press效果,部分边框,layerDrawableNormal*/
     /**

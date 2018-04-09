@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -25,6 +26,9 @@ public class MyEditText extends AppCompatEditText implements View.OnFocusChangeL
     private Drawable mClearDrawable;
     private boolean hasFoucs,isHiddenClear;
     public MyEditText.OnRightListener onRightListener;
+    private int clearIcon_width;
+    private int clearIcon_height;
+
     public interface OnRightListener{
         boolean clickRight();
     }
@@ -68,6 +72,10 @@ public class MyEditText extends AppCompatEditText implements View.OnFocusChangeL
         TypedArray viewNormal = this.getContext().obtainStyledAttributes(attrs, R.styleable.MyEditText);
         Drawable drawable_normal = viewNormal.getDrawable(R.styleable.MyEditText_drawable_normal);
         Drawable drawable_press  = viewNormal.getDrawable(R.styleable.MyEditText_drawable_press);
+
+
+        clearIcon_width =  (int) viewNormal.getDimension(R.styleable.MyEditText_clearIcon_width, -1);
+        clearIcon_height = (int) viewNormal.getDimension(R.styleable.MyEditText_clearIcon_height,-1);
 
         isHiddenClear= viewNormal.getBoolean(R.styleable.MyEditText_my_et_hiddenClear, false);
         Drawable clearIcon = viewNormal.getDrawable(R.styleable.MyEditText_my_et_clearIcon);
@@ -186,10 +194,30 @@ public class MyEditText extends AppCompatEditText implements View.OnFocusChangeL
         }else{
             mClearDrawable = getCompoundDrawables()[2];
         }
+
         if (mClearDrawable == null) {
-            mClearDrawable = getResources().getDrawable(R.drawable.textclear);
+//            mClearDrawable = getResources().getDrawable(R.drawable.textclear);
+            mClearDrawable = ContextCompat.getDrawable(getContext(),R.drawable.textclear);
         }
-        mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight());
+        int width=mClearDrawable.getIntrinsicWidth();
+        int height=mClearDrawable.getIntrinsicHeight();
+
+        int w=mClearDrawable.getIntrinsicWidth();
+        int h=mClearDrawable.getIntrinsicHeight();
+
+
+        if(clearIcon_width!=-1&&clearIcon_height!=-1){
+            w=clearIcon_width;
+            h=clearIcon_height;
+        }else if(clearIcon_width!=-1){
+            w=clearIcon_width;
+            h= (int) viewHelper.chuFa(viewHelper.chengFa(clearIcon_width,height),width);
+        }else if(clearIcon_height!=-1){
+            w=clearIcon_height;
+            h= (int) viewHelper.chuFa(viewHelper.chengFa(clearIcon_height,width),height);
+        }
+
+        mClearDrawable.setBounds(0, 0, w, h);
 //        this.setCompoundDrawablePadding(dip2px(getContext(), 5));
 //        this.setPadding(0,0,15,0);
         // 默认设置隐藏图标

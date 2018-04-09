@@ -50,30 +50,36 @@
         <attr name="normal_textColor" />
         <attr name="checked_textColor" />
         <attr name="drawable_direction" />
-        <attr name="drawable_left_width"  />
-        <attr name="drawable_left_height" />
+        <attr name="left_width"  />
+        <attr name="left_height" />
 
-        <attr name="drawable_top_width"  />
-        <attr name="drawable_top_height"  />
+        <attr name="top_width"  />
+        <attr name="top_height"  />
 
-        <attr name="drawable_right_width"  />
-        <attr name="drawable_right_height" />
+        <attr name="right_width"  />
+        <attr name="right_height" />
 
-        <attr name="drawable_bottom_width"  />
-        <attr name="drawable_bottom_height"  />
+        <attr name="bottom_width"  />
+        <attr name="bottom_height"  />
 
     </declare-styleable>
     <declare-styleable name="MyRadioButton">
-        <attr name="my_radio_normal" format="reference"/>
-        <attr name="my_radio_checked" format="reference"/>
-        <attr name="my_radio_normal_color" format="color"/>
-        <attr name="my_radio_checked_color" format="color"/>
-        <attr name="my_radio_checked_drawable" format="enum">
-            <enum name="left" value="1"></enum>
-            <enum name="top" value="2"></enum>
-            <enum name="right" value="3"></enum>
-            <enum name="bottom" value="4"></enum>
-        </attr>
+        <attr name="normal_drawable" />
+        <attr name="checked_drawable" />
+        <attr name="normal_textColor" />
+        <attr name="checked_textColor" />
+        <attr name="drawable_direction" />
+        <attr name="left_width"  />
+        <attr name="left_height" />
+
+        <attr name="top_width"  />
+        <attr name="top_height"  />
+
+        <attr name="right_width"  />
+        <attr name="right_height" />
+
+        <attr name="bottom_width"  />
+        <attr name="bottom_height"  />
     </declare-styleable>
 
 
@@ -242,6 +248,8 @@
 
         <attr name="drawable_normal" />
         <attr name="drawable_press" />
+        <attr name="clearIcon_width" format="dimension"/>
+        <attr name="clearIcon_height" format="dimension"/>
 
         <attr name="pressColor" />
 
@@ -380,17 +388,17 @@
         <enum name="right" value="3"></enum>
         <enum name="bottom" value="4"></enum>
     </attr>
-    <attr name="drawable_left_width" format="dimension"/>
-    <attr name="drawable_left_height" format="dimension"/>
+    <attr name="left_width" format="dimension"/>
+    <attr name="left_height" format="dimension"/>
 
-    <attr name="drawable_top_width" format="dimension"/>
-    <attr name="drawable_top_height" format="dimension"/>
+    <attr name="top_width" format="dimension"/>
+    <attr name="top_height" format="dimension"/>
 
-    <attr name="drawable_right_width" format="dimension"/>
-    <attr name="drawable_right_height" format="dimension"/>
+    <attr name="right_width" format="dimension"/>
+    <attr name="right_height" format="dimension"/>
 
 
-    <attr name="drawable_bottom_width" format="dimension"/>
-    <attr name="drawable_bottom_height" format="dimension"/>
+    <attr name="bottom_width" format="dimension"/>
+    <attr name="bottom_height" format="dimension"/>
 
 </resources>
