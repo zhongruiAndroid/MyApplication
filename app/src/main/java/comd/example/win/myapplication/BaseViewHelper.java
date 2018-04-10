@@ -7,6 +7,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * Created by windows10 on 2018/3/28.
@@ -128,6 +129,7 @@ public class BaseViewHelper extends Helper{
      * "sweep"	流线型渐变。
      */
     protected Integer gradientType=gradientType_linear;
+
 
 
     public BaseViewHelper setShapeType(Integer shapeType) {
@@ -599,6 +601,42 @@ public class BaseViewHelper extends Helper{
                 //有部分边框，有presscolor
                 hasPartBorderHasPressColor(myView);
             }
+        }
+
+        setCompoundDrawables(myView);
+    }
+
+    private void setCompoundDrawables(View view) {
+        if(view instanceof TextView){
+            TextView myView= (TextView) view;
+            Drawable drawable0 = myView.getCompoundDrawables()[0];
+            Drawable drawable1 = myView.getCompoundDrawables()[1];
+            Drawable drawable2 = myView.getCompoundDrawables()[2];
+            Drawable drawable3 = myView.getCompoundDrawables()[3];
+
+            if(drawable0!=null){
+                int width=drawable0.getIntrinsicWidth();
+                int height=drawable0.getIntrinsicHeight();
+                drawable0.setBounds(0,0,getLeftWH(width,height)[0],getLeftWH(width,height)[1]);
+            }
+            if(drawable1!=null){
+                int width=drawable1.getIntrinsicWidth();
+                int height=drawable1.getIntrinsicHeight();
+                drawable1.setBounds(0,0,getTopWH(width,height)[0],getTopWH(width,height)[1]);
+            }
+            if(drawable2!=null){
+                int width=drawable2.getIntrinsicWidth();
+                int height=drawable2.getIntrinsicHeight();
+                drawable2.setBounds(0,0,getRightWH(width,height)[0],getRightWH(width,height)[1]);
+            }
+            if(drawable3!=null){
+                int width=drawable3.getIntrinsicWidth();
+                int height=drawable3.getIntrinsicHeight();
+                drawable3.setBounds(0,0,getBottomWH(width,height)[0],getBottomWH(width,height)[1]);
+            }
+
+
+            myView.setCompoundDrawables(drawable0,drawable1,drawable2,drawable3);
         }
     }
 

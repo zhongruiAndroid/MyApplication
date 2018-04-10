@@ -288,40 +288,54 @@
     <!--******************************MyTextView*************************************-->
     <declare-styleable name="MyTextView">
 
-        <attr name="drawable_normal" />
-        <attr name="drawable_press" />
+        <attr name="drawable_normal"/>
+        <attr name="drawable_press"/>
 
-        <attr name="pressColor" />
+        <attr name="pressColor"/>
 
-        <attr name="all_line" />
-        <attr name="left_line" />
-        <attr name="top_line" />
-        <attr name="right_line" />
-        <attr name="bottom_line" />
+        <attr name="all_line"/>
+        <attr name="left_line"/>
+        <attr name="top_line"/>
+        <attr name="right_line"/>
+        <attr name="bottom_line"/>
         <!--shapeType-->
-        <attr name="shapeType" />
+        <attr name="shapeType"/>
         <!--stroke-->
-        <attr name="borderWidth" />
-        <attr name="borderColor" />
-        <attr name="borderDashWidth" />
-        <attr name="borderDashGap" />
+        <attr name="borderWidth"/>
+        <attr name="borderColor"/>
+        <attr name="borderDashWidth"/>
+        <attr name="borderDashGap"/>
         <!--solid-->
-        <attr name="solidColor" />
+        <attr name="solidColor"/>
         <!--corners-->
-        <attr name="radius" />
-        <attr name="topLeftRadius" />
-        <attr name="topRightRadius" />
-        <attr name="bottomLeftRadius" />
-        <attr name="bottomRightRadius" />
+        <attr name="radius"/>
+        <attr name="topLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomLeftRadius"/>
+        <attr name="bottomRightRadius"/>
         <!--gradient-->
-        <attr name="gradientAngle" />
-        <attr name="gradientCenterX" />
-        <attr name="gradientCenterY" />
-        <attr name="gradientStartColor" />
-        <attr name="gradientCenterColor" />
-        <attr name="gradientEndColor" />
-        <attr name="gradientRadius" /><!--渐变的半径。仅在 android:type="radial" 时适用。-->
-        <attr name="gradientType" />
+        <attr name="gradientAngle"/>
+        <attr name="gradientCenterX"/>
+        <attr name="gradientCenterY"/>
+        <attr name="gradientStartColor"/>
+        <attr name="gradientCenterColor"/>
+        <attr name="gradientEndColor"/>
+        <attr name="gradientRadius"/><!--渐变的半径。仅在 android:type="radial" 时适用。-->
+        <attr name="gradientType"/>
+
+
+        <attr name="left_width"  />
+        <attr name="left_height"  />
+
+        <attr name="top_width"  />
+        <attr name="top_height"  />
+
+        <attr name="right_width"  />
+        <attr name="right_height"  />
+
+
+        <attr name="bottom_width"  />
+        <attr name="bottom_height"  />
     </declare-styleable>
     <!--******************************公共属性*************************************-->
     <attr name="drawable_normal" format="reference"/>

@@ -52,6 +52,20 @@
                 android:padding="10dp"
                 >
 
+                <comd.example.win.myapplication.MyTextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:drawableBottom="@drawable/check"
+                    android:drawableRight="@drawable/check"
+                    android:drawableTop="@drawable/check"
+                    android:drawableLeft="@drawable/check"
+                    app:left_width="10dp"
+                    app:right_height="20dp"
+                    app:top_width="30dp"
+                    app:bottom_width="40dp"
+                    app:bottom_height="20dp"
+                    />
+
                 <comd.example.win.myapplication.MyLinearLayout
                     android:id="@+id/mll"
                     android:layout_width="100dp"
@@ -149,6 +163,7 @@
                     app:borderDashWidth="2dp"
                     app:borderWidth="3dp"
                     app:bottomLeftRadius="30dp"
+                    app:clearIcon_width="15dp"
                     app:gradientAngle="a45"
                     app:gradientCenterX="0.5"
                     app:gradientCenterY="0.5"
@@ -160,7 +175,6 @@
                     app:shapeType="rectangle"
                     app:solidColor="@color/transparent"
                     app:top_line="true"
-                    app:clearIcon_width="15dp"
                     />
 
                 <comd.example.win.myapplication.MyImageView
@@ -213,8 +227,8 @@
                         android:id="@+id/afddas"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:checked="true"
                         android:button="@null"
+                        android:checked="true"
                         android:drawableBottom="@drawable/check"
                         android:drawableRight="@drawable/check"
                         android:drawableTop="@drawable/check"

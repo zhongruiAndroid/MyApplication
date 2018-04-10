@@ -41,20 +41,20 @@ public class MyRadioButton extends AppCompatRadioButton {
         viewHelper.normal_textColor = viewNormal.getColor(R.styleable.MyRadioButton_normal_textColor, this.getTextColors().getDefaultColor());
         viewHelper.checked_textColor = viewNormal.getColor(R.styleable.MyRadioButton_checked_textColor,this.getTextColors().getDefaultColor());
 
-        viewHelper.drawable_left_width = (int) viewNormal.getDimension(R.styleable.MyRadioButton_left_width, -1);
-        viewHelper.drawable_left_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_left_height,-1);
+        viewHelper.left_width = (int) viewNormal.getDimension(R.styleable.MyRadioButton_left_width, -1);
+        viewHelper.left_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_left_height,-1);
 
 
-        viewHelper.drawable_top_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_top_width, -1);
-        viewHelper.drawable_top_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_top_height,-1);
+        viewHelper.top_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_top_width, -1);
+        viewHelper.top_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_top_height,-1);
 
 
-        viewHelper.drawable_right_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_right_width, -1);
-        viewHelper.drawable_right_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_right_height,-1);
+        viewHelper.right_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_right_width, -1);
+        viewHelper.right_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_right_height,-1);
 
 
-        viewHelper.drawable_bottom_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_bottom_width, -1);
-        viewHelper.drawable_bottom_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_bottom_height,-1);
+        viewHelper.bottom_width =  (int) viewNormal.getDimension(R.styleable.MyRadioButton_bottom_width, -1);
+        viewHelper.bottom_height = (int) viewNormal.getDimension(R.styleable.MyRadioButton_bottom_height,-1);
 
 
 
